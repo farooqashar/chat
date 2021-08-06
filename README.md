@@ -34,3 +34,13 @@ cd server
 node index.js
 ```
 The backend server is located at `http://localhost:3002/`.
+
+**Front Page of Site With A Chat Example Between Two Users**
+
+![Front Page of Site With A Chat Example Between Two Users](https://raw.githubusercontent.com/farooqashar/chat/readme_images/images/frontend.png)
+
+
+**Backend Server Running Status**
+
+![Backend Server Running Status](https://raw.githubusercontent.com/farooqashar/chat/readme_images/images/backend.png)
+
