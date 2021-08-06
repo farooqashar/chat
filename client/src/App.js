@@ -10,7 +10,7 @@ function App() {
   const [room, setRoom] = useState("");
 
 
-  const CONNECTION = "http://localhost:3002/";
+  const CONNECTION = "localhost:3002/";
 
 useEffect(()=> {
   socket = io(CONNECTION);
