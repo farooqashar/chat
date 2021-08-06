@@ -175,6 +175,7 @@
       place-items: center;
       margin-right: 10px;
       margin-top: 20px;
+      opacity: 0.9;
   }
 
 .messageBox {
@@ -183,19 +184,24 @@
     align-items: center;
 }
 
-.messageBox #You{
-    display: flex;
-    flex-direction: row;
+#You{
+  justify-content: flex-end;
+  padding-right: 19px;
+}
+
+#Else {
+  justify-content: flex-start;
+}
+
+#Else .eachMessage {
+    justify-content: flex-start;
+    background-color: chartreuse;
     align-items: center;
-}
+    justify-content: center;
+    color: white;
+  }
 
-.messageBox #Else {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-  .messageBox h2 {  
+.messageBox h2 {  
       color: white;
       font-size: medium;
       font-weight: lighter;

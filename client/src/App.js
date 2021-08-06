@@ -64,9 +64,8 @@ useEffect(() => {
             
             <div className="messageBox" id={each_message.sender === userName ? "You" : "Else"}>
             <div className="eachMessage" key={key}>
-              <h2>{each_message.message}</h2>
+              <h2>{each_message.sender}: {each_message.message}</h2>
             </div>
-            <h2>{each_message.sender}</h2>
             </div>
           )
         })}
