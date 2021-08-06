@@ -62,9 +62,9 @@ useEffect(() => {
         {allMessages.map((each_message,key) => {
           return (
             
-            <div className="messageBox">
+            <div className="messageBox" id={each_message.sender === userName ? "You" : "Else"}>
             <div className="eachMessage" key={key}>
-              <h1>{each_message.message}</h1>
+              <h2>{each_message.message}</h2>
             </div>
             <h2>{each_message.sender}</h2>
             </div>

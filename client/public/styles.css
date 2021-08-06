@@ -174,13 +174,26 @@
       display: grid;
       place-items: center;
       margin-right: 10px;
+      margin-top: 20px;
   }
 
-  .messageBox {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-  }
+.messageBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.messageBox #You{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.messageBox #Else {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
   .messageBox h2 {  
       color: white;
