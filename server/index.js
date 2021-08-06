@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const server = app.listen("3002", (req, res) => {
-  console.log("Server running on PORT.");
+  console.log("Server running on PORT 3002.");
 });
 
 app.get("/", (req, res) => {
@@ -22,15 +22,11 @@ const io = require("socket.io")(server, {
 });
 
 io.on("connection", (socket) => {
-  console.log(socket.id);
-
   socket.on("join_room", (data) => {
     socket.join(data);
-    console.log("User joined Room: " + data);
   });
 
   socket.on("send_message", (data) => {
-    console.log("data" + data);
     const room = data.room;
     const content = data.content;
 
