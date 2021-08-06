@@ -5,9 +5,9 @@ import io from "socket.io-client";
 let socket;
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [userName, setUserName] = useState("");
-  const [room, setRoom] = useState("");
+  const [room, setRoom] = useState("MIT");
 
 
   const CONNECTION = "localhost:3002/";
@@ -17,6 +17,7 @@ useEffect(()=> {
 }, [CONNECTION]);
 
   const connectRoom = () => {
+      setLoggedIn(true);
       socket.emit('join_room', room);
   };
 
@@ -39,7 +40,16 @@ useEffect(()=> {
         <button onClick={connectRoom} className="btn btn-primary">Enter Chat</button>
       </div>
       : 
-      <h1>Logged In</h1>
+      <div className="chat">
+        <div className="messages">
+        </div>
+
+        <div className="inputs">
+        <input id="message" type="text" placeholder="Enter Message Here" />
+        <button>Send</button>
+
+        </div>
+      </div>
     }
     </div>
   );
