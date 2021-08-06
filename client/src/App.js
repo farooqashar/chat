@@ -108,7 +108,7 @@ function App() {
               type="text"
               placeholder="Enter Message Here"
             />
-            <button onClick={handleSendMessage}>Send</button>
+            <button onClick={handleSendMessage}><div className="eachl">Send</div></button>
           </div>
         </div>
       )}
