@@ -6,7 +6,7 @@ const socket = require("socket.io");
 app.use(cors());
 app.use(express.json());
 
-const server = app.listen("3002", (req, res) => {
+const server = app.listen("https://chat-green-psi.vercel.app/", (req, res) => {
   console.log("Server running on PORT 3002.");
 });
 

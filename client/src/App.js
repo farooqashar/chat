@@ -11,7 +11,8 @@ function App() {
   const [message, setMessage] = useState("");
   const [allMessages, setAllMessages] = useState([]);
 
-  const CONNECTION = "localhost:3002/";
+  // const CONNECTION = "localhost:3002/";
+  const CONNECTION = "https://chat-green-psi.vercel.app/";
 
   useEffect(() => {
     socket = io(CONNECTION);
