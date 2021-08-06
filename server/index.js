@@ -12,6 +12,10 @@ const server = app.listen("3002", (req,res) => {
     console.log("Server running on PORT.");
 });
 
+app.get("/", (req,res) => {
+    res.send("Backend Server For Chat App Is Running!");
+})
+
 const io = require("socket.io")(server, {
   cors: {
     origin: "http://localhost:3000",
