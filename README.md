@@ -9,7 +9,7 @@ To run this site locally, it is necessary to install all required npm packages a
 ## Cloning 
 
 ```
-git clone https://github.com/farooqashar/employees.git
+git clone https://github.com/farooqashar/chat.git
 ```
 
 ## Installing requirements 
