@@ -41,6 +41,9 @@ useEffect(() => {
 
     <div className="App">
     {!loggedIn ? 
+    <>
+      <h1>Chat App</h1>
+      <p className="text-warning">Log In Below To Start Chatting in A Chat Room</p>
       <div className="login"> 
       <br/>
       <br/>
@@ -55,6 +58,7 @@ useEffect(() => {
         </div>
         <button onClick={connectRoom} className="btn btn-primary">Enter Chat</button>
       </div>
+      </>
       : 
       <div className="chat">
         <div className="messages">
