@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Chat App
+
+This site's frontend features React and can be seen on Vercel at https://chat-green-psi.vercel.app/. 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
