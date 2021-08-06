@@ -24,15 +24,15 @@ useEffect(() => {
   socket.on("receive_message", (data) => {
     setAllMessages([...allMessages,data])
   })
-}, []);
+}, [allMessages]);
 
   const connectRoom = () => {
       setLoggedIn(true);
       socket.emit('join_room', room);
   };
 
-  const handleSendMessage = () => {
-      socket.emit('send_message', {room: room, content: {message: message, sender: userName}});
+  const handleSendMessage = async () => {
+      await socket.emit('send_message', {room: room, content: {message: message, sender: userName}});
       setAllMessages([...allMessages,{message: message, sender: userName}]);
       setMessage("");
   };
@@ -61,8 +61,12 @@ useEffect(() => {
 
         {allMessages.map((each_message,key) => {
           return (
+            
+            <div className="messageBox">
             <div className="eachMessage" key={key}>
-              <h1>{each_message.sender}: {each_message.message}</h1>
+              <h1>{each_message.message}</h1>
+            </div>
+            <h2>{each_message.sender}</h2>
             </div>
           )
         })}

@@ -164,9 +164,26 @@
   }
   
   .eachMessage {
-      width: 300px;
-      height: auto;
+      width: 200px;
+      height: 60px;
       background-color: #0091ff;
       color: white;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 20px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      margin-right: 10px;
   }
+
+  .messageBox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .messageBox h2 {  
+      color: white;
+      font-size: medium;
+      font-weight: lighter;
+}
