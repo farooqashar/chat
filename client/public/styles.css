@@ -1,0 +1,114 @@
+.App {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes mainTitle {
+    from {
+      color: red;
+    }
+    to {
+      color: white;
+    }
+    to {
+      color: blue;
+    }
+  }
+  @keyframes each {
+    from {
+      color: purple;
+    }
+    to {
+      color: blue;
+    }
+    to {
+      color: goldenrod;
+    }
+  }
+  @keyframes subt {
+    from {
+      color: red;
+    }
+    to {
+      color: yellow;
+    }
+    to {
+      color: green;
+    }
+  }
+  @keyframes bkgrdc {
+    from {
+      background-color: lightcyan;
+    }
+    to {
+      background-color: darkslateblue;
+    }
+    to {
+      background-color: white;
+    }
+  }
+
+  .login {
+      width: 600px;
+      height: 300px;
+      border: 6px solid lightblue;
+      border-radius: 12px;
+  }
+
+  .inputChange {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    animation-name: bkgrdc;
+    animation-duration: 25s;
+  }
+  h1 {
+    color: crimson;
+    text-align: center;
+    animation-name: mainTitle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .basic {
+      color: white;
+  }
+
+  .eachl {
+    color: cornflowerblue;
+    animation-name: each;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  .subttt {
+    color: aqua;
+    animation-name: subt;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .subttt {
+    color: aqua;
+    animation-name: subt;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  
+  .ssm {
+    color: aqua;
+    font-size: medium;
+    animation-name: subt;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
