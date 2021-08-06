@@ -51,7 +51,7 @@ function App() {
             <br />
             <div className="form-group">
               <label className="form-label basic" htmlFor="name">
-                Enter Name:
+                <div className="subttt">Enter Name:</div>
               </label>
               <div className="inputContainer">
                 <input
@@ -65,7 +65,7 @@ function App() {
             </div>
             <div className="form-group">
               <label className="form-label basic" htmlFor="room">
-                Enter Room:
+                <div className="subttt">Enter Room:</div>
               </label>
               <div className="inputContainer">
                 <input
@@ -78,7 +78,7 @@ function App() {
               </div>
             </div>
             <button onClick={connectRoom} className="btn btn-primary">
-              Enter Chat
+              <div className="eachl">Enter Chat</div>
             </button>
           </div>
         </>
