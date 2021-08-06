@@ -93,7 +93,7 @@ function App() {
                 >
                   <div className="eachMessage" key={key}>
                     <h2>
-                      {each_message.sender}: {each_message.message}
+                      <i>{each_message.sender}</i>: {each_message.message}
                     </h2>
                   </div>
                 </div>

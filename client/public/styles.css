@@ -113,16 +113,6 @@
     animation-iteration-count: infinite;
   }
 
-  /* .chat .messages {
-      flex: 90%;
-      width: 100%;
-  }
-
-  .chat .inputs {
-    flex: 90%;
-    width: 100%;
-  } */
-
   .chat {
     width: 600px;
     height: 350px;
@@ -195,7 +185,7 @@
 
 #Else .eachMessage {
     justify-content: flex-start;
-    background-color: chartreuse;
+    background-color: green;
     align-items: center;
     justify-content: center;
     color: white;
