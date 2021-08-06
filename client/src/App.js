@@ -5,9 +5,13 @@ import io from "socket.io-client";
 let socket;
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
   const [room, setRoom] = useState("MIT");
+
+
+  const [message, setMessage] = useState("");
+  const [allMessages, setAllMessages] = useState([]);
 
 
   const CONNECTION = "localhost:3002/";
@@ -16,9 +20,21 @@ useEffect(()=> {
   socket = io(CONNECTION);
 }, [CONNECTION]);
 
+useEffect(() => {
+  socket.on("receive_message", (data) => {
+    console.log(data);
+  })
+}, []);
+
   const connectRoom = () => {
       setLoggedIn(true);
       socket.emit('join_room', room);
+  };
+
+  const handleSendMessage = () => {
+      socket.emit('send_message', {room: room, content: {message: message, sender: userName}});
+      setAllMessages([...allMessages,{message: message, sender: userName}]);
+      setMessage("");
   };
 
   return (
@@ -42,11 +58,19 @@ useEffect(()=> {
       : 
       <div className="chat">
         <div className="messages">
+
+        {allMessages.map((each_message,key) => {
+          return (
+            <div key={key}>
+            <h1>{each_message.sender}: {each_message.message}</h1>
+            </div>
+          )
+        })}
         </div>
 
         <div className="inputs">
-        <input id="message" type="text" placeholder="Enter Message Here" />
-        <button>Send</button>
+        <input onChange={(event) => setMessage(event.target.value)} id="message" type="text" placeholder="Enter Message Here" />
+        <button onClick={handleSendMessage}>Send</button>
 
         </div>
       </div>

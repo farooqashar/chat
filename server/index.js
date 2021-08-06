@@ -27,6 +27,14 @@ io.on('connection', (socket) => {
         console.log("User joined Room: " + data);
     });
 
+    socket.on('send_message', (data) => {
+        console.log("data" + data);
+        const room = data.room;
+        const content = data.content;
+
+        socket.to(room).emit("receive_message",content)
+    });
+
     socket.on('disconnect', () => {
         console.log("User Disconnected.");
     });
