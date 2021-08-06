@@ -206,3 +206,9 @@
       font-size: medium;
       font-weight: lighter;
 }
+
+.inputContainer {
+    width: fit-content;
+    justify-content: center;
+    padding-left: calc(100% - 65%);
+}
