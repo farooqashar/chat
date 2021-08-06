@@ -7,7 +7,7 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
-  const [room, setRoom] = useState("MIT");
+  const [room, setRoom] = useState("");
 
 
   const [message, setMessage] = useState("");
@@ -22,7 +22,7 @@ useEffect(()=> {
 
 useEffect(() => {
   socket.on("receive_message", (data) => {
-    console.log(data);
+    setAllMessages([...allMessages,data])
   })
 }, []);
 
@@ -61,8 +61,8 @@ useEffect(() => {
 
         {allMessages.map((each_message,key) => {
           return (
-            <div key={key}>
-            <h1>{each_message.sender}: {each_message.message}</h1>
+            <div className="eachMessage" key={key}>
+              <h1>{each_message.sender}: {each_message.message}</h1>
             </div>
           )
         })}

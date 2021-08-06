@@ -163,3 +163,10 @@
     font-size: 18px;
   }
   
+  .eachMessage {
+      width: 300px;
+      height: auto;
+      background-color: #0091ff;
+      color: white;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
