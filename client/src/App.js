@@ -85,13 +85,14 @@ function App() {
       ) : (
         <div className="chat">
           <div className="messages">
-            {allMessages.map((each_message, key) => {
+            {allMessages.map((each_message, index) => {
               return (
                 <div
                   className="messageBox"
                   id={each_message.sender === userName ? "You" : "Else"}
+                  key={index}
                 >
-                  <div className="eachMessage" key={key}>
+                  <div className="eachMessage">
                     <h2>
                       <i>{each_message.sender}</i>: {each_message.message}
                     </h2>
@@ -108,7 +109,9 @@ function App() {
               type="text"
               placeholder="Enter Message Here"
             />
-            <button onClick={handleSendMessage}><div className="eachl">Send</div></button>
+            <button onClick={handleSendMessage}>
+              <div className="eachl">Send</div>
+            </button>
           </div>
         </div>
       )}
